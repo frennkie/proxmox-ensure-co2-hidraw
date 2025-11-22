@@ -1,0 +1,11 @@
+[Unit]
+Description=Ensure that hidraw is set correctly for co2 monitoring
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/ensure-co2-hidraw.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
