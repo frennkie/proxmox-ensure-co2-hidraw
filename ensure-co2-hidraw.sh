@@ -8,7 +8,11 @@ set -e
 
 CONTAINER_ID="101"
 
-echo "[DBG] running ensure-co-hidraw.sh"
+echo "[DBG] running ensure-co2-hidraw.sh"
+
+echo "[DBG] sleep 10s..."
+sleep 10
+echo "[DBG] ..sleep done."
 
 # 1. Get config value
 CONFIG_VALUE=$(grep dev0 /etc/pve/lxc/${CONTAINER_ID}.conf | cut -d "/" -f3- | cut -d ',' -f1)
